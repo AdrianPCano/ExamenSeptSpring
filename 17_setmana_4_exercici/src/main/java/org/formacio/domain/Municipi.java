@@ -1,6 +1,11 @@
 package org.formacio.domain;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+@Controller
+@RequestMapping("/municipi")
 public class Municipi {
 
 	/**
@@ -17,6 +22,8 @@ public class Municipi {
 	}
 
 	@Override
+	@RequestMapping
+	@ResponseBody
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -25,6 +32,8 @@ public class Municipi {
 	}
 
 	@Override
+	@RequestMapping
+	@ResponseBody
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
