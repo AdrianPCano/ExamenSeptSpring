@@ -22,7 +22,7 @@ public class Persona {
 	 * Persona ha d'emprar la sequencia SEQ_PERSONA per els ids
 	 */
 	
-	@Id @GeneratedValue(strategy=GenerationType.SEQUENCE, generator= "sequencia_persones")
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PER_ID")
 	private Long id;
 	
