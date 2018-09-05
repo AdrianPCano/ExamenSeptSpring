@@ -28,10 +28,10 @@ public class Persona {
 	@Column(name="PER_NOM")
 	private String nom;
 	
-	@Column(name="PER_PROPIETATS")
+	
 	private Set<Casa> propietats = new HashSet<>();
 	
-	@Column(name="PER_MASCOTES")
+	
 	private Set<Animal> mascotes = new HashSet<>();
 	
 	public Long getId() {
