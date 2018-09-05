@@ -17,13 +17,13 @@ public class Casa {
 	 */
 
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="PER_ID")
+	@Column(name="CAS_ID")
     private Long id;
 	
-	@Column(name="PER_ADRECA")
+	@Column(name="CAS_ADRECA")
 	private String adreca;
 	
-	@Column(name="PER_MUNICIPI")
+	@Column(name="CAS_MUNICIPI")
 	private Municipi municipi;
 
 	public Long getId() {

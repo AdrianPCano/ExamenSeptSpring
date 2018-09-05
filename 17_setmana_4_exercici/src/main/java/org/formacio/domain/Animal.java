@@ -1,15 +1,24 @@
 package org.formacio.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
-@RequestMapping("/animals")
+@Entity
+@Table(name="T_ANIMALS")
+
 public class Animal {
 	
 	/**
-	 * L'id d'animal es el propi nom. No fa falta cap generador
+	 * L'id d'animal es el propi nom. No fa falta cap generadorSS
 	 */
+	
+	@Id 
+	@Column(name="ANI_NOM")
 	private String nom;
 
 	public String getNom() {

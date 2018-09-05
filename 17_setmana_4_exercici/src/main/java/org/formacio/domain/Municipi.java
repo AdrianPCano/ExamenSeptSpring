@@ -18,8 +18,8 @@ public class Municipi {
 	/**
 	 * L'id del municipi es el propi nom. No fa falta cap generador
 	 */
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="PER_NOM")
+	@Id 
+	@Column(name="MUN_NOM")
 	private String nom;
 
 	public String getNom() {
