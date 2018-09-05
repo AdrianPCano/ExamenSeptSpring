@@ -12,16 +12,16 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="T_PERSONAS")
+@Table(name="T_PERSONES")
 
-@SequenceGenerator(name= "sequencia_personas", sequenceName="SEQ_PERSONA")
+@SequenceGenerator(name= "sequencia_persones", sequenceName="SEQ_PERSONA")
 public class Persona {
 
 	/*
 	 * Persona ha d'emprar la sequencia SEQ_PERSONA per els ids
 	 */
 	
-	@Id @GeneratedValue(strategy=GenerationType.SEQUENCE, generator= "sequencia_personas")
+	@Id @GeneratedValue(strategy=GenerationType.SEQUENCE, generator= "sequencia_persones")
 	@Column(name="PER_ID")
 	private Long id;
 	
@@ -31,7 +31,7 @@ public class Persona {
 	
 	private Set<Casa> propietats = new HashSet<>();
 	
-	
+	@OneToMany(MappedBy= "propietari")
 	private Set<Animal> mascotes = new HashSet<>();
 	
 	public Long getId() {
