@@ -59,6 +59,4 @@ public class Persona {
 	public void setMascotes(Set<Animal> mascotes) {
 		this.mascotes = mascotes;
 	}
-
-	
 }

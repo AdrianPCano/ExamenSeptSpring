@@ -1,19 +1,25 @@
 package org.formacio.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller
-@RequestMapping("/municipis")
+@Entity
+@Table(name="MUNICIPIS")
 public class Municipi {
 
 	/**
 	 * L'id del municipi es el propi nom. No fa falta cap generador
 	 */
-	@Id
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="PER_NOM")
 	private String nom;
 
 	public String getNom() {
@@ -25,8 +31,6 @@ public class Municipi {
 	}
 
 	@Override
-	@RequestMapping
-	@ResponseBody
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -35,8 +39,6 @@ public class Municipi {
 	}
 
 	@Override
-	@RequestMapping
-	@ResponseBody
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
