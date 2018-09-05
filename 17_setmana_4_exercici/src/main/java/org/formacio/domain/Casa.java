@@ -20,9 +20,10 @@ public class Casa {
 	@Column(name="PER_ID")
     private Long id;
 	
-	
+	@Column(name="PER_ADRECA")
 	private String adreca;
 	
+	@Column(name="PER_MUNICIPI")
 	private Municipi municipi;
 
 	public Long getId() {
