@@ -1,16 +1,19 @@
 package org.formacio.domain;
 
+import javax.persistence.Id;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/municipi")
+@RequestMapping("/municipis")
 public class Municipi {
 
 	/**
 	 * L'id del municipi es el propi nom. No fa falta cap generador
 	 */
+	@Id
 	private String nom;
 
 	public String getNom() {

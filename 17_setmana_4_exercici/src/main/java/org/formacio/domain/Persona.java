@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -28,10 +29,10 @@ public class Persona {
 	@Column(name="PER_NOM")
 	private String nom;
 	
-	
+	@OneToMany(mappedBy= "propietari")
 	private Set<Casa> propietats = new HashSet<>();
 	
-	@OneToMany(MappedBy= "propietari")
+	@OneToMany(mappedBy= "propietari")
 	private Set<Animal> mascotes = new HashSet<>();
 	
 	public Long getId() {
